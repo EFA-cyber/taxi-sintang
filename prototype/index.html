@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rental mobil Sintang: hitung perjalanan dari Sintang</title>
+  <meta name="description" content="Sewa mobil dari Sintang ke Pontianak, Putussibau, Nanga Pinoh, Sekadau, dan jemputan Bandara Tebelian.">
+  <link rel="preload" href="fonts/overpass-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#hero">[ISI: nama usaha]</a>
+    <div class="topbar-actions">
+      <button class="toggle-3d" id="toggle-3d" type="button" aria-pressed="true">3D nyala</button>
+      <a class="wa" id="wa-header" href="#">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="scene" id="scene" aria-hidden="true">
+        <img class="poster" src="media/poster-hero.webp" alt="" width="1600" height="900">
+      </div>
+
+      <div class="hero-copy">
+        <h1>Mau ke mana<br>dari Sintang?</h1>
+
+        <form class="tujuan" id="tujuan-form" autocomplete="off">
+          <label for="tujuan">Tujuan</label>
+          <div class="tujuan-row">
+            <input id="tujuan" name="ke" list="daftar-tujuan" type="text"
+                   placeholder="Pontianak, Putussibau, Nanga Pinoh…" required>
+            <button type="submit">Hitung perjalanan</button>
+          </div>
+          <datalist id="daftar-tujuan">
+            <option value="Pontianak"></option>
+            <option value="Putussibau"></option>
+            <option value="Nanga Pinoh"></option>
+            <option value="Sekadau"></option>
+            <option value="Bandara Tebelian"></option>
+          </datalist>
+          <p class="hint">Jemput di Bandara Tebelian juga bisa.</p>
+        </form>
+
+        <div class="rambu" id="rambu" hidden aria-live="polite">
+          <p class="rambu-kota" id="rambu-kota"></p>
+          <p class="rambu-angka" id="rambu-angka"></p>
+          <p class="rambu-catatan" id="rambu-catatan"></p>
+          <a class="rambu-lanjut" href="#rute">Lanjut susun rute</a>
+        </div>
+      </div>
+
+      <p class="keterangan">Pertemuan Sungai Kapuas dan Melawi. Di kejauhan, Bukit Kelam.</p>
+    </section>
+
+    <section class="rute" id="rute">
+      <h2>Penyusun rute menyusul</h2>
+      <p>Di sini nanti Anda memilih tanggal, jumlah penumpang, dan mobil, lalu pesanan terkirim ke WhatsApp.</p>
+    </section>
+  </main>
+
+  <script type="module" src="hero.js"></script>
+</body>
+</html>
